@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const title = <h1>SUSCRIBE</h1>;
+const text = <p>Sign up with your email address to receive news and updates.</p>
+const inputFields = (
+  <input></input>
+);
+const button = <button>Suscribe</button>;
+
+const app = (
+  <div>
+    {title}
+    {text}
+    {inputFields}
+    {button}
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const rootElement = document.getElementById('root')
+// we render the JSX element using the ReactDOM package
+ReactDOM.render(app, rootElement)
